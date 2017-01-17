@@ -9,6 +9,7 @@
   # cd Desktop ((or go to the place of the file ))
 
 3) Run it like this :
+
   # ./FindTheNumber.sh
 
 4) ENJOY the Game! ;)

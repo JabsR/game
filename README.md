@@ -5,6 +5,7 @@
 2) Type this command in your terminal :
    
   $ su
+  
   # cd Desktop ((or go to the place of the file ))
 
 3) Run it like this :

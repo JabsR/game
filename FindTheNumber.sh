@@ -2,83 +2,59 @@
 
 #some colors
 
-RED='\033[1;31m'
-BLUE='\033[1;34m'
+red='\033[1;31m'
+blue='\033[1;34m'
+reset='\033[0m'
 
-
-TEST=$RED"!!"$BLUE"HELLO"$RED" World "$BLUE"!!"
-echo $TEST
-sleep 1;
-echo $BLUE"What's your name ?"
+TEST="${red}!!${blue} HELLO${red} World ${blue}!!$reset"
+echo -e "$TEST"
+sleep 1
+echo -ne "${blue} What's your name ?${reset}:> "
 read NAME
-echo $BLUE"hi, $NAME! Can I call you Bill Gates ?"
+echo -ne "${blue}hi,${reset} $NAME! Can I call you Bill Gates ?"
 read ANS 
-sleep 1.5;
+sleep 1.5
 
-
-while :
-do
- case $ANS in
-       ok)
-           echo $RED"Nice!"
-           break
-           ;;
-       sure)
-            echo $RED"Nice!"
+while :; do
+    case $ANS in
+        [oO][kK]|sure|ye[aA][hH]|[yY][eE][sS])
+            echo -e "${red}Nice!$reset"
             break
             ;;
-       yeah)
-            echo $RED"Nice!"
-            break
-            ;;
-       yes)
-            echo $RED"Nice!"
-            break
-            ;;
-       never)
-            echo $RED"Bruuh.."
-            break
-            ;;
-       nope)
-            echo $RED"Bruuh.."
-            break
-            ;;
-       no)
-            echo $RED"Bruuh.."
-            break
-            ;;
-       *)
-            echo $RED"Okay, just one time"
-            break
-            ;;
- esac
+        [nN][eE][vV][eE][rR]|[nN][oO][pP][eE]|[nN][oO])
+                echo -e "${red} Bruuh..$reset"
+                break
+                ;;
+        *)
+                echo -e "${red}Okay, just one time$reset"
+                break
+                ;;
+    esac
 done
 
 sleep 1.5
 
 echo "Do you want to play a game Bill Gates ?"
-sleep 1.5;
-echo "yes or no ?"
+sleep 1.5
 
-while :
-do
- read IN
+while :; do
+ read -p "yes or no ?:> " IN
  case $IN in
       no)
-          echo $RED"OK. "
+          echo -e "${red}OK.$reset"
           sleep 1
-          echo $RED"But I don't Care!"
+          echo -e "${red}But I don't Care!$reset"
           sleep 2
           break
           exit
           ;;
       yes)
-          echo $BLUE"You said $IN . . ." 
+          echo -e "${blue}You said $IN . . .$reset" 
           sleep 1.5
           break
           ;;
       *)
-          echo $BLUE"Sorry, I don't Understand..."
+          echo -e "${blue}Sorry, I don't Understand...$reset Try Again."
           sleep 1.5
           ;;
  esac
@@ -94,19 +70,19 @@ done
 
 
 
-echo "$BLUE#########################################################
+echo -e "${blue}#########################################################
 ###############################################################
 ######14##############+#############7#############/3###########
 ###############################################################
-############################################$RED&&&&&&$BLUE############
-############################################$RED&$BLUE####$RED&$BLUE#############
-############################################$RED&$BLUE####$RED&$BLUE#############
-############################################$RED&&&&&$BLUE##############
-##################$RED@@@@@@@@$BLUE##################$RED&$BLUE####$RED&$BLUE#############
-######################$RED@$BLUE#####################$RED&$BLUE####$RED&$BLUE##############
-################$RED@$BLUE#####$RED@$BLUE#####################$RED&&&&&&$BLUE##############
-################$RED@$BLUE#####$RED@$BLUE#########################################
-#################$RED@@@@@$BLUE##########################################
+############################################${red}&&&&&&${blue}############
+############################################${red}&${blue}####${red}&${blue}#############
+############################################${red}&${blue}####${red}&${blue}#############
+############################################${red}&&&&&${blue}##############
+##################${red}@@@@@@@@${blue}##################${red}&${blue}####${red}&${blue}#############
+######################${red}@${blue}#####################${red}&${blue}####${red}&${blue}##############
+################${red}@${blue}#####${red}@${blue}#####################${red}&&&&&&${blue}##############
+################${red}@${blue}#####${red}@${blue}#########################################
+#################${red}@@@@@${blue}##########################################
 ###############################################################
 ###############################################################
 ########*2####################-5##################+7#######=###
@@ -139,66 +115,18 @@ REP=no
 while [ "$REP" != "17" ]
 do
  sleep 1;
- echo $RED"Not Correct! Try Again!  "$BLUE
+ echo -ne "${red}Not Correct! Try Again!:> $reset"
  read REP
 done
 
 
 
 
-echo $BLUE"YES!It was $REP!YOU WIN!!"
+echo -e "${blue}YES!It was $reset$REP${blue}!YOU WIN!!$reset"
 sleep 2;
 echo "See you soon,BYE!"
 sleep 1.5;
 echo "Follow me on Snapchat and Instgram ;) --> Jab_tkd"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                       ###### Created by-JabsR ######
-
                                         ### Copyright (c),Inc. ###
-
